@@ -1,0 +1,131 @@
+body {
+  background-color: #e6e6e6;
+  font-family: monospace;
+  font-weight: normal;
+}
+
+h1 {
+  background-color: white;
+  color: black;
+  font-weight: normal;
+  text-align: center;
+  border-style: solid none solid none;
+  border-width: 1px;
+  border-color: gray;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+h2 {
+  color: black;
+  font-weight: normal;
+  text-align: center;
+  font-size: 25px;
+  text-decoration: underline;
+  text-decoration-color: gray;
+  letter-spacing: 2px;
+}
+
+h3 {
+  color: black;
+  font-weight: normal;
+}
+.container {
+  margin: 70px auto;
+  overflow: hidden;
+  width: 80%;
+  text-align: center;
+}
+
+.userInput{
+  background-color: white;
+  border-style: solid none solid none;
+  border-width: 1px;
+  border-color: gray;
+  margin: 2px 2px 2px 2px;
+}
+
+.tissueSelection{
+  margin: 2px 2px 2px 2px;
+  float: left;
+  position: relative;
+}
+
+.selectTissue {
+  font-size: 14px;
+  margin-left: 7px;
+
+}
+
+.tissueInput {
+  background-color: white;
+  border: 1px solid #e6ccff;
+  font-size: 15px;
+  width: 150px;
+  margin: 4px 2px 2px 2px;
+}
+
+.submit {
+  background-color: #bfbfbf;
+  border-style: none;
+  color: white;
+  border: 1px solid gray;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 1.5;
+  padding-top: 3px;
+  padding-bottom: 0px;
+  margin-right: 7px;
+}
+
+.debyeParam {
+  margin: 4px 2px 4px 2px;
+  font-weight: normal;
+  color: black;
+  text-align: right;
+  font-size: 14px;
+}
+
+.debyeParamList {
+  font-weight: bold;
+}
+
+.debyeInput {
+  background-color: #f5f2f8;
+  text-align: center;
+  font-weight: normal;
+  width: 98px;
+  font-size: 16px;
+  border: 1px solid #e6ccff;
+  border-radius: 3px;
+  padding-bottom: 2px;
+}
+
+.debugAndNames {
+  font-size: 10px;
+}
+
+.debugging {
+  position: relative;
+  color: gray;
+}
+
+.debyeNames{
+  position: relative;
+  float: right;
+  color: gray;
+}
+
+.Conductivity {
+  background-color: white;
+  border-style: solid none solid none;
+  border-width: 1px;
+  border-color: gray;
+}
+
+.Permittivity {
+  background-color: white;
+  border-style: solid none solid none;
+  border-width: 1px;
+  border-color: gray;
+}

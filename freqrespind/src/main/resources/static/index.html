@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title> Frequency Response Indicator </title>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="tissue.js"></script>
+    <link rel="stylesheet" href="ChartWebsite.css">
+</head>
+<body>
+<h1>
+    Frequency Response Indicator
+</h1>
+
+<br>
+<div class="userInput">
+      <div class="tissueSelection">
+          <form name="tissueId" id="getTissueId">
+             <label for="tissueInput" class="selectTissue"> Select tissue: </label>
+              <select id="tissues"  class=" tissueInput" name="id">
+                  <option value="1"  > Adrenal Gland </option><option value="2" > Air </option><option value="3"> Bile </option><option value="4"> Blood </option><option value="5"> Blood Plasma </option><option value="6"> Blood Serum </option><option value="7"> Blood Vessel Wall </option> <option value="8"> Bone (Cancellous) </option><option value="9"> Bone (Cortical) </option><option value="10"> Bone Marrow (Red) </option><option value="11"> Bone Marrow (Yellow) </option><option value="12"> Brain </option><option value="13"> Brain (Grey Matter) </option><option value="14"> Brain (White Matter) </option><option value="15"> Breast Fat </option><option value="16"> Breast Gland </option><option value="17"> Bronchi </option><option value="18"> Bronchi lumen </option><option value="19"> Cartilage </option><option value="20"> Cerebellum </option><option value="21"> Cerebrospinal Fluid </option><option value="22"> Cervix </option><option value="23"> Commissura Anterior </option><option value="24"> Commissura Posterior </option><option value="25"> Connective Tissue </option><option value="26"> Diaphragm </option><option value="27"> Ductus deferens </option><<option value="28"> Dura </option><option value="29"> Epididymis </option><option value="30"> Esophagus </option><option value="31"> Esophagus lumen </option><option value="32"> Eye (Aqueous humor) </option><option value="33"> Eye (Choroid) </option><option value="34"> Eye (Ciliary body) </option><option value="35"> Eye (Corneea) </option><option value="36"> Eye (Iris) </option><option value="37"> Eye (Lens) </option><option value="38"> Eye (Retina) </option><option value="39"> Eye (Sclera) </option><option value="40"> Eye (Vitreous humor) </option><option value="41"> Eye Lens (Cortex) </option><option value="42"> Eye Lens (Nucleus) </option><option value="43"> Fat </option><option value="44"> Fat (Average Infiltrated) </option><option value="45"> Fat (Not Infiltrated) </option><option value="46"> Gallbladder </option><option value="47"> Heart Lumen </option><option value="48"> Heart Muscle </option><option value="49"> Hippocampus </option><option value="50"> Hypophysis </option><option value="51"> Hypothalamus </option><option value="52"> Intervertebral Disc </option><option value="53"> Kidney </option><option value="54"> Kidney (Cortex) </option><option value="55"> Kidney (Medulla) </option><option value="56"> Large Intestine </option><option value="57"> Large Intestine Lumen </option><option value="58"> Larynx </option><option value="59"> Liver </option><option value="60"> Lung </option><option value="61"> Lung (Deflated) </option><option value="62"> Lung (Inflated) </option><option value="63"> Lymph </option><option value="64"> Lymphnode </option><option value="65"> Mandible </option><option value="66"> Medulla Oblongata </option><option value="67"> Meniscus </option><option value="68"> Midbrain </option><option value="69"> Mucous Membrane </option><option value="70"> Muscle </option><option value="71"> Nerve </option><option value="72"> Ovary </option><option value="73"> Pancreas </option><option value="74"> Penis </option><option value="75"> Pharynx </option><option value="76"> Pineal Body </option><option value="77"> Placenta </option><option value="78"> Pons </option><option value="79"> Prostate </option><option value="80"> Salivary Gland </option><option value="81"> SAT (Subcutaneous Fat) </option><option value="82"> Seminal vesicle </option><option value="83"> Skin </option><option value="84"> Skull Cancellous </option><option value="85"> Skull Cortical </option><option value="86"> Small Intestine </option><option value="87"> Small Intestine Lumen</option><option value="88"> Spinal Cord </option><option value="89"> Spleen </option><option value="90"> Stomach </option><option value="91"> Stomach Lumen </option><option value="92"> Tendon (Ligament) </option><option value="93"> Testis </option><option value="94"> Thalamus </option><option value="95"> Thymus </option><option value="96"> Thyroid Gland </option><option value="97"> Tongue </option><option value="98"> Tooth </option><option value="99"> Tooth (Dentine) </option><option value="100"> Tooth (Enamel) </option><option value="101"> Trachea </option><option value="102"> Trachea Lumen </option><option value="103"> Ureter (Urethra) </option><option value="104"> Urinary Bladder Wall </option><option value="105"> Urine </option><option value="106"> Uterus </option><option value="107"> Vagina </option><option value="108"> Vertebrae </option><option value="109"> Water </option>
+              </select>
+              <input type="submit" value="SUBMIT" class="submit">
+          </form>
+      </div>
+
+          <div class="debyeParam">
+              <form  name="debyeParams" id="debyeForm">
+                  <label for="debyeParam" > Debye parameters: </label>
+
+                  <label for="conduct_sg_0" class="debyeParamList"> conduct_sg_0 </label>
+                  <input  id="conduct_sg_0" name="conduct_sg_0" class="debyeInput" >
+
+                  <label for="e_stat" class="debyeParamList"> e_stat </label>
+                  <input  id="e_stat" name="e_stat" class="debyeInput" >
+
+                  <label for="e_inf" class="debyeParamList"> e_inf </label>
+                  <input  id="e_inf" name="e_inf" class="debyeInput">
+
+                  <label for="tau" class="debyeParamList"> tau </label>
+                  <input  id="tau" name="tau" class="debyeInput">
+
+                  <input type="submit" value="SUBMIT" class="submit">
+              </form>
+          </div>
+  </div>
+
+  <div class="debugAndNames">
+      <div class="debyeNames">
+          Relative static permittivity &nbsp; &nbsp;
+          Static conductivity &nbsp;
+          Relative optical permittivity &nbsp;
+          Relaxation time &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      </div>
+  </div>
+  </br>
+
+  <div class="Conductivity">
+      </br>
+      <h2> Conductivity </h2>
+      <div id="condChart" class="condChart"></div>
+   </div>
+   </br>
+
+   <div class="Permittivity">
+       </br>
+       <h2> Relative Permittivity </h2>
+       <div id="permChart" class="permChart"></div>
+     </div>
+    <script src="main.js"></script>
+
+  </body>
+  </html>

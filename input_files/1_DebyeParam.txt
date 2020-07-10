@@ -1,0 +1,2 @@
+#adrenalGland cond e-stat e-inf tau
+0.641130090 61.7026 54.7498093 6.45985e-11
